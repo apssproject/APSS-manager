@@ -1,0 +1,30 @@
+Serial
+  Class for manage a serial comunication with one board.
+
+
+__init__(self,port,baudrate)
+  Main constructor with support for port and baudrate.
+
+
+serialWrite(self,input):
+  Method for sending serial input to the board.
+
+
+startListener(self):
+  Method for starting the listener thread
+  for keep up the listening of the serial
+  output.
+
+
+stopListener(self):
+  Method for stop the listener thread if it is running.
+
+
+lastAnswerReady(self):
+  Flag that turn True if the board send
+  one message and the listener is enabled.
+
+
+lastAnswer(self):
+  Return the last output listened and turn OFF
+  the "_last_answer_ready" flag.
